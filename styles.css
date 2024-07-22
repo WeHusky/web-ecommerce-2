@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #90b9bb;
+  --secondary-color: #4508fb;
+  --text-dark: #0f172a;
+  --text-light: #94a3b8;
+  --extra-light: #2e8b57;
+  --white: #ffffff;
+  --max-width: 1400px;
+  --body-clr: #f6f9fe;
+  --primary-clr: #05555c;
+  --primary-light-clr: #eaf3fa;
+  --links-clr: #186f78;
+  --text-clr: #3f7277;
+ 
+
+ 
+    
+}
+
+
+
+/************************/
+/*      nav   */
+/************************/
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+.main-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  border-radius: 50px 50px;
+  border: 0px solid rgba(255, 255, 255, 0.1);
+  transition: backdrop-filter 2.5s ease;
+  backdrop-filter: blur(20px);
+  max-width: 490px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transition: transform 0.6s ease, border 0.6s ease, backdrop-filter 0.6s ease;
+  border: none;
+}
+
+nav {
+  position: relative;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.nav.scrolled {
+  transform: translateY(10px);
+  border: 0px solid rgba(35, 46, 53, 0.1);
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+nav ul li :hover {
+  color:#91A368;
+  transition: 0.8s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: ''; /* Menambahkan konten kosong untuk pseudo-element */
+  position: absolute; /* Menjadikan posisi absolut */
+  bottom: -2px; /* Menempatkan pseudo-element di bawah teks */
+  left: 0; /* Menempatkan pseudo-element di sebelah kiri */
+  width: 0; /* Mulai dengan lebar 0 */
+  height: 2px; /* Ketebalan garis */
+  background-color:#91A368; /* Warna garis */
+  transition: width 0.8s ease; /* Transisi lebar dengan efek lambat */
+  
+}
+
+nav ul li a:hover::after {
+  width: 100%; /* Membuat lebar pseudo-element menjadi 100% saat hover */
+}
+
+
+
+/************************/
+/*     1. Hero    */
+/************************/
+
+
+
+#najma_sayang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .container_hero {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background: url('gambar/homepage2.png') no-repeat center center;
+    background-size: 100% auto; /* Membuat gambar latar belakang 100% lebar dan biarkan tingginya sesuai aspek rasio */
+    color: white;
+    height: 80vh;
+    width: 90%;
+    margin: 5vh auto;
+    position: relative;
+    border-radius: 16px;
+  }
+  
+  .destination__container {
+    position: relative;
+    padding: 5rem 5rem;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  .socials {
+    position: absolute;
+    top: 25rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .socials::after {
+    position: fixed;
+    content: "";
+    top: -25rem;
+    left: 55rem;
+    height: 185rem;
+    width: 3px;
+    background-color: var(--white);
+  }
+  
+  .socials span {
+    font-size: 2rem;
+    color: var(--white);
+  }
+  
+  .content h1 {
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--extra-light);
+  }
+  
+  .content h1 span {
+    -webkit-text-stroke: 1.8px #2e8b57;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .content p {
+    max-width: 350px;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    color: var(--extra-light);
+  }
+  
+  .content .btn {
+    padding: 0.75rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: rgb(21, 149, 106);
+    cursor: pointer;
+  }
+  
+  .section__container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .section__header {
+    font-size: 2.6rem;
+    font-weight: 700;
+    font-family: var(--header-font);
+    text-align: center;
+    color: var(--text-dark);
+    padding-bottom: 3%;
+  }
+  
+  .section__subheader {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .section__subheader::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: -3rem;
+    height: 2rem;
+    width: 2px;
+    }
+  
+  
+  
